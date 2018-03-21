@@ -1,12 +1,19 @@
-variables=range(0,20)
-n = 0
-exams=range(6,61)
-for total in exams:
-    for a in variables:
-        for b in variables:
-            for c in variables:
-                if total != ((6*a)+(9*b)+(20*c)):
-                    n = n + total
-                    print n
-                if total == ((6*a)+(9*b)+(20**c)) and total > (n+6):
-                    print total, n
+#returns the nth prime number so primeNth(1) = 2 and primeNth(5) = 11
+
+def primeNth(requested):
+    if(requested <2 ):
+        return 2
+    x = 2 #this is our starting point
+    lastPrime = 2
+    count = 1
+    while(count != requested):
+        x += 1
+        divisors = 2
+        for i in range(2,x):
+            if (x%i == 0):
+                divisors +=1
+        if divisors == 2:
+            lastPrime = x
+            count +=1
+    print (lastPrime)
+primeNth(100)
