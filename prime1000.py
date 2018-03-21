@@ -16,4 +16,4 @@ def primeNth(requested):
             lastPrime = x
             count +=1
     print (lastPrime)
-primeNth(100)
+primeNth(1000)
