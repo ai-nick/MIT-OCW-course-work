@@ -9,9 +9,11 @@ def primeNth(requested):
     while(count != requested):
         x += 1
         divisors = 2
-        for i in range(2,x):
+        i = 2
+        while divisors < 3 and(i <= x/2): #loop until we get a third divisor or reach half way
             if (x%i == 0):
                 divisors +=1
+            i += 1    
         if divisors == 2:
             lastPrime = x
             count +=1
